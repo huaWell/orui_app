@@ -1,0 +1,25 @@
+.dialog-list-item{
+    border:0.0625rem solid rgba(0,0,0,.06);
+    box-sizing: border-box;
+    padding:0.9375rem;
+    width: 95%;
+    box-shadow: 0 0.125rem 0.3125rem 0 rgba(0,0,0,.06);
+    z-index: 2;
+}
+
+.dialog-list-item-operation{
+    font-size: 0.75rem;
+    justify-content: space-between !important;
+}
+
+orui-space{
+    width: 100%;
+}
+
+.dialog-list-item-content span{
+    flex: 1;
+}
+
+.dialog-list-item-content orui-input{
+    flex: 2;
+}
