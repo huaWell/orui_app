@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es2021",
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "jsx": "react",
+    "jsxFactory": "ORUI.createElement",
+    "jsxFragmentFactory": "ORUI.createFragment"
+  },
+  "include": [
+    "components/**/*"
+  ]
+}
+
+
