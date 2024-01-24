@@ -1,0 +1,292 @@
+:host{
+    display: inline-block;
+    --font-weight: 400;
+    --orui-size-button-icon-mini: 0.8125rem;
+    --orui-size-button-icon-small: 0.9375rem;
+    --orui-size-button-icon-normal: 1.0625rem;
+    --orui-size-button-icon-large: 1.125rem;
+}
+.orui-button-icon {
+    /*height: 1.125rem;*/
+    /*width: 1.125rem;*/
+    /*margin-left: 0.5rem;*/
+    /*margin-right: 0.5rem;*/
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.orui-button {
+    width: fit-content;
+    cursor: pointer;
+    border-radius: 0.125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    user-select: none;
+}
+.orui-button-large {
+    padding: 0.6875rem 1rem;
+    height: 2.5rem;
+    font-size: var(--orui-font-size-10);
+}
+
+.orui-button-mini{
+    padding: 0.1875rem 0.75rem;
+    height: 1.125rem;
+    font-size: var(--orui-font-size-main);
+}
+.orui-button-middle {
+    padding: 0.4375rem 1rem;
+    height: 2rem;
+    font-size: var(--orui-font-size-9);
+}
+.orui-button-small {
+    padding: 0.1875rem 0.75rem;
+    height: 1.5rem;
+    font-size: var(--orui-font-size-7);
+}
+.orui-button-main {
+    background-color: var(--orui-color-primary);
+    color: var(--orui-color-white);
+    font-weight: var(--font-weight);
+    border-radius: 0.125rem;
+}
+.orui-button-sub {
+    background-color: var(--orui-color-background);
+    color: var(--orui-color-text);
+    font-weight: var(--font-weight);
+    border-radius: 0.125rem;
+    border: 0.0625rem solid var(--orui-color-border);
+}
+.orui-button-sub-a {
+    background-color: var(--orui-color-background);
+    color: var(--orui-color-text);
+    font-weight: var(--font-weight);
+    border-radius: 0.125rem;
+}
+.orui-button-link {
+    background-color: var(--orui-color-background);
+    color: var(--orui-color-primary);
+    font-weight: var(--font-weight);
+    font-size: 0.75rem;
+    border-radius: 0.125rem;
+}
+
+.orui-button-icon {
+    /*width: 1.125rem;*/
+    /*height: 1.125rem;*/
+}
+.orui-button-icon img {
+    width: auto;
+    height: 100%;
+}
+.orui-button-icon-button-main {
+    height: 1.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75rem;
+    background-color: var(--orui-color-primary);
+    color: var(--orui-color-white);
+    font-weight: var(--font-weight);
+}
+.orui-button-icon-button-sub {
+    height: 1.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75rem;
+    background-color: var(--orui-color-background);
+    color: var(--orui-color-primary);
+    font-weight: var(--font-weight);
+    border: 0.0625rem solid var(--orui-color-primary);
+}
+.orui-button-icon-button-sub:hover {
+    border-color: rgba(31, 143, 255, 0.7);
+    color: rgba(31, 143, 255, 0.7);
+    background-color: var(--orui-color-background);
+}
+
+.orui-button-icon-button-sub-no-text {
+    border: 0.0625rem solid var(--orui-color-border);
+    background-color: var(--orui-color-background);
+}
+.orui-button-icon-button-sub-a {
+    background-color: var(--orui-color-background) !important;
+    border: none !important;
+}
+.orui-button-disable {
+    border-color: var(--orui-color-border);
+    background-color: var(--orui-color-disabled);
+    color: rgba(0, 0, 0, 0.25);
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: .4;
+}
+.orui-button-opacity {
+    opacity: 0;
+    pointer-events: none;
+}
+.orui_button.no_background {
+    background: none!important;
+}
+.orui-button-icon-button-main.no_background {
+    background: none!important;
+}
+.orui-button.orui-button-middle.title_style2 {
+    font-size: 1.125rem;
+    letter-spacing: normal;
+    color: #333333;
+    white-space: nowrap;
+    padding-left: 0rem;
+}
+.orui-button.orui-button-middle.title_style3 {
+    font-size: 1.375rem;
+    letter-spacing: normal;
+    color: #333333;
+    white-space: nowrap;
+    padding-left: 0rem;
+}
+
+.orui-button-block{
+    width: 100%;
+}
+
+.orui-button-none{
+    border: 0;
+    background-color: transparent;
+}
+
+.orui-button-fill-primary{
+    background-color: var(--orui-color-primary);
+    border: 0.0625rem solid var(--orui-color-primary);
+    color: var(--orui-color-white);
+    font-weight: var(--font-weight);
+    border-radius: 0.125rem;
+}
+
+/*.orui-button-fill-primary:hover {*/
+/*    background-color: #40A9FF;*/
+/*}*/
+/*.orui-button-fill-primary:active {*/
+/*    background-color: #096DD9;*/
+/*}*/
+
+.orui-button-fill-default,.orui-button-outline-default{
+    background-color: var(--orui-color-white);
+    color: var(--orui-color-text);
+    font-weight: var(--font-weight);
+    border-radius: 0.125rem;
+    border: 0.0625rem solid var(--orui-color-border);
+}
+
+/*.orui-button-default:active {*/
+/*    background-color: var(--orui-color-weak);*/
+/*}*/
+
+.orui-button-fill-danger{
+    background-color: var(--orui-color-danger);
+    color: var(--orui-color-white);
+    font-weight: var(--font-weight);
+    border: 0.0625rem transparent;
+    border-radius: 0.125rem;
+
+}
+
+.orui-button-fill-danger{
+    background-color: var(--orui-color-danger);
+    color: var(--orui-color-white);
+    font-weight: var(--font-weight);
+    border: 0.0625rem solid var(--orui-color-danger);
+    border-radius: 0.125rem;
+
+}
+
+.orui-button-fill-success{
+    background-color: var(--orui-color-success);
+    color: var(--orui-color-white);
+    border: 0.0625rem solid var(--orui-color-success);
+    font-weight: var(--font-weight);
+    border-radius: 0.125rem;
+}
+
+
+.orui-button-fill-warning{
+    background-color: var(--orui-color-warning);
+    color: var(--orui-color-white);
+    border: 0.0625rem solid var(--orui-color-warning);
+    font-weight: var(--font-weight);
+    border-radius: 0.125rem;
+}
+
+.orui-button-outline-primary{
+    border:0.0625rem solid var(--orui-color-primary);
+    background: var(--orui-color-white);
+    font-weight: var(--font-weight);
+    border-radius: 0.125rem;
+    color: var(--orui-color-primary);
+}
+
+.orui-button-outline-success{
+    border:0.0625rem solid var(--orui-color-success);
+    background: var(--orui-color-white);
+    font-weight: var(--font-weight);
+    border-radius: 0.125rem;
+    color: var(--orui-color-success);
+}
+
+.orui-button-outline-danger{
+    border:0.0625rem solid var(--orui-color-danger);
+    background: var(--orui-color-white);
+    font-weight: var(--font-weight);
+    border-radius: 0.125rem;
+    color: var(--orui-color-danger);
+}
+
+.orui-button-outline-warning{
+    border:0.0625rem solid var(--orui-color-warning);
+    background: var(--orui-color-white);
+    font-weight: var(--font-weight);
+    border-radius: 0.125rem;
+    color: var(--orui-color-warning);
+}
+
+.orui-button-none-warning{
+    background: var(--orui-color-white);
+    font-weight: var(--font-weight);
+    border-radius: 0.125rem;
+    border: 0.0625rem solid var(--orui-color-white);
+    color: var(--orui-color-warning);
+}
+
+.orui-button-none-default{
+    border: 0;
+}
+
+.orui-button-none-danger{
+    background: var(--orui-color-white);
+    font-weight: var(--font-weight);
+    border-radius: 0.125rem;
+    border: 0.0625rem solid var(--orui-color-white);
+    color: var(--orui-color-danger);
+}
+
+.orui-button-none-success{
+    background: var(--orui-color-white);
+    font-weight: var(--font-weight);
+    border-radius: 0.125rem;
+    border: 0.0625rem solid var(--orui-color-white);
+    color: var(--orui-color-success);
+}
+
+.orui-button-none-primary{
+    background: var(--orui-color-white);
+    font-weight: var(--font-weight);
+    border-radius: 0.125rem;
+    border: 0.0625rem solid var(--orui-color-white);
+    color: var(--orui-color-primary);
+}
+/*.orui-button-fill-danger:active {*/
+/*    background-color: var(--orui-color-danger);*/
+/*}*/

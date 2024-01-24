@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+}
+:host{
+    --fill-color:var(--orui-color-primary);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    max-height: 100%;
+    margin: 0.3125rem 0.875rem;
+    height: 1.875rem;
+}
+
+.slider-container{
+    width: 100%;
+    padding: 0.3125rem 0.875rem;
+    position: relative;
+}
+.slider-bar {
+    height: 0.25rem;
+    width: 100%;
+    padding: 0 0.5rem;
+    border-radius: 0.1875rem;
+    position: relative;
+    background-color: var(--orui-color-light);
+}
+
+.slider-thumb {
+    position: absolute;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: var(--orui-color-text-light-solid);
+    border: 0.0625rem solid var(--orui-color-border);
+    left: 0;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 0.125rem 0.3125rem 0 rgba(0,0,0,.06);
+}
+
+.orui-slider-disabled .slider-thumb{
+    cursor: not-allowed;
+    box-shadow: 0 0.125rem 0.3125rem 0 rgba(0,0,0,.06);
+}
+
+.orui-slider-fill{
+    position: absolute;
+    z-index: 1;
+    height: 0.1875rem;
+    left: 0;
+    border-radius: 0.1875rem;
+    background-color: var(--fill-color);
+}
+
+.orui-slider-ticks{
+    position: absolute;
+    width: 100%;
+    height: 0.1875rem;
+    left: 0;
+    z-index: 1;
+}
+
+.orui-slider-tick{
+    position: absolute;
+    top: -0.125rem;
+    width: 0.4375rem;
+    background-color: var(--orui-color-light);
+    height: 0.4375rem;
+    margin-left: -0.1875rem;
+    border-radius: 50%;
+}
+
+.orui-slider-tick-active{
+    background-color: var(--fill-color);
+}
+
+.orui-slider-marks{
+    position: relative;
+    width: 100%;
+    overflow: visible;
+    font-size: var(--orui-font-size-3);
+    height: 0.6875rem;
+    margin-top: 0.625rem;
+}
+
+.orui-slider-mark{
+    position: absolute;
+    top: 50%;
+    user-select: none;
+    display: inline-block;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.orui-slider-disabled .orui-slider-mark,.orui-slider-disabled .orui-slider-tick{
+    cursor: not-allowed;
+    box-shadow: none;
+}
+.orui-slider-disabled .orui-slider-fill:after,.orui-slider-disabled .orui-slider-tick-active:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    background-color: hsla(0,0%,100%,.6);
+}

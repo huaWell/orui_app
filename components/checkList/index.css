@@ -1,0 +1,56 @@
+:host{
+    --header-font-size: var(--orui-font-size-7);
+    --prefix-width: "auto";
+    --prefix-padding-right: 0.75rem;
+    --align-items: center;
+    --active-background-color: var(--orui-color-border);
+    --border-inner: solid 0.0625rem var(--orui-color-border);
+    --border-top: solid 0.0625rem var(--orui-color-border);
+    --border-bottom: solid 0.0625rem var(--orui-color-border);
+    --padding-left: 0.75rem;
+    --padding-right: 0.75rem;
+    --font-size: var(--orui-font-size-9);
+    --extra-max-width: 70%;
+    --text-color:var(--orui-color-weak);
+    width: 100%;
+}
+.orui-check-list-body{
+    background-color: var(--orui-color-background);
+    overflow: hidden;
+    font-size: var(--font-size);
+    border-top: var(--border-top);
+    border-bottom: var(--border-bottom);
+}
+
+.orui-list-body-inner{
+    margin-top: -0.0625rem;
+}
+
+.orui-check-list-item{
+    display: flex;
+    align-items: var(--align-items);
+    justify-content: flex-start;
+    border-top: var(--border-inner);
+    padding-right: var(--padding-right);
+    padding-left: var(--padding-left);
+}
+
+.orui-check-list-item-main{
+    flex: auto;
+    padding: var(--orui-padding-4) 0;
+}
+
+.orui-check-list-item-extra{
+    flex: none;
+    padding-left: var(--padding-left);
+    font-size: var(--orui-font-size-7);
+    color: var(--text-color);
+    max-width: var(--extra-max-width);
+}
+.orui-check-list-item-disabled div {
+    opacity: .4;
+}
+
+.orui-check-list-item-readonly,.orui-check-list-item-disabled{
+    pointer-events: none;
+}

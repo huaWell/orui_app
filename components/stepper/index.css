@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+}
+:host{
+    --height: 1.75rem;
+    --input-width: 2.75rem;
+    --input-font-size: var(--orui-font-size-main);
+    --input-font-color: var(--orui-color-text);
+    --input-background-color: var(--orui-color-fill-content);
+    --border-radius: 0.125rem;
+    --border: none;
+    --border-inner: 0.125rem solid transparent;
+    --active-border: var(--border);
+    --button-font-size: var(--orui-font-size-7);
+    --button-text-color: var(--orui-color-primary);
+    --button-background-color: var(--orui-color-fill-content);
+    --button-width: var(--height);
+    --button-border-color: var(--orui-color-primary)
+}
+.orui-stepper{
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    border: var(--border);
+    border-radius: var(--border-radius);
+}
+
+.orui-button{
+    width: var(--button-width);
+    height: var(--height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    color: var(--button-text-color);
+    background-color: var(--button-background-color);
+    font-size: var(--button-font-size);
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 0;
+}
+
+.orui-button span{
+    /*display: inline-block;*/
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orui-button span orui-icon{
+    width: 0.9375rem;
+    height: 0.9375rem;
+}
+
+.orui-stepper-input-container{
+    flex: 1 1;
+    border-right: var(--border-inner);
+    border-left: var(--border-inner);
+}
+
+.orui-stepper-input{
+    height: var(--height);
+    --placeholder-color: var(--orui-color-light);
+    --background-color: var(--input-background-color);
+    --font-size: var(--input-font-size);
+    --color: var(--input-font-color);
+    --text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    min-height: 24px;
+    background-color: var(--background-color);
+}
+
+.orui-stepper-input-element{
+    flex: auto;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 0;
+    margin: 0;
+    color: var(--color);
+    font-size: var(--font-size);
+    line-height: 1.5;
+    background: 0 0;
+    border: 0;
+    height: 100%;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    min-height: 1.5em;
+    text-align: var(--text-align);
+}
+.orui-button:disabled{
+    color: var(--orui-color-weak);
+}
+
+.orui-stepper-disabled{
+    cursor: not-allowed;
+    opacity: 0.4;
+}
+.orui-stepper-disabled input{
+    pointer-events: none;
+    color: var(--orui-color-weak);
+}
+
+.orui-stepper-disabled .orui-button{
+    cursor: not-allowed;
+    pointer-events: none;
+}

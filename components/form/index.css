@@ -1,0 +1,6 @@
+:host {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 var(--orui-padding-5);
+}

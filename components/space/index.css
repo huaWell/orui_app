@@ -1,0 +1,5 @@
+:host {
+    display: flex;
+    gap: var(--gap-size);
+    --gap-size: var(--orui-gap-m);
+}

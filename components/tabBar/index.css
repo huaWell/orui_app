@@ -1,0 +1,60 @@
+:host{
+    display: block;
+    background-color: var(--orui-color-background);
+    padding: 0;
+    --text-font-size: var(--orui-font-size-2);
+    --text-active-color: var(--orui-color-primary);
+    --text-color: var(--orui-color-text-secondary);
+}
+*{
+    box-sizing: border-box;
+}
+.orui-tab-bar-wrap{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow: hidden;
+    min-height: 3rem;
+}
+
+.orui-tab-bar-item{
+    flex: 1 1;
+    color: var(--text-color);
+    white-space: nowrap;
+    padding: 0.25rem 0.5rem;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.orui-icon-wrapper{
+    display: inline-block;
+    position: relative;
+}
+
+.orui-icon-wrapper orui-icon{
+    font-size: 1.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    line-height: 1;
+}
+
+.orui-icon-text{
+    font-size: var(--text-font-size);
+    line-height: 0.9375rem;
+}
+
+.orui-icon-text-icon{
+    margin-top: 0.125rem;
+}
+
+.orui-tab-bar-item-active{
+    color: var(--text-active-color);
+}

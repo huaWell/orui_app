@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Views</title>
+    <style>
+        .content {
+            background: red;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <h1 id="content">Welcome to the Home Page</h1>
+    <ul>
+        <li><a href="#" onclick="navigateTo('/')" class="content">Home</a></li>
+        <li><a href="#" onclick="navigateTo('/about')">About</a></li>
+        <li><a href="#" onclick="navigateTo('/contact')">Contact</a></li>
+        <li><a href="#" onclick="navigateTo('/products/1')">Product 1</a></li>
+        <li><a href="#" onclick="navigateTo('/products/2')">Product 2</a></li>
+    </ul>
+    <div id="nested-view"></div>
+</div>
+
+<script>
+    const routes = {
+        '/': 'Welcome to the Home Page',
+        '/about': 'This is the About Page',
+        '/contact': 'Contact us at contact@example.com',
+        '/products/:id': showProductPage,
+    };
+
+    function updateContent() {
+        const currentRoute = window.location.pathname;
+        const contentElement = document.getElementById('content');
+        const nestedViewElement = document.getElementById('nested-view');
+
+        let matchedRoute = Object.keys(routes).find(route => {
+            const routeRegex = new RegExp('^' + route.replace(/:[a-zA-Z]+/g, '([a-zA-Z0-9]+)') + '$');
+            return routeRegex.test(currentRoute);
+        });
+
+        if (matchedRoute) {
+            const params = extractParams(matchedRoute, currentRoute);
+            const routeContent = routes[matchedRoute];
+
+            // Render main content
+            contentElement.textContent = typeof routeContent === 'function' ? routeContent(params) : routeContent;
+
+            // Render nested content if available
+            if (typeof routeContent === 'function' && routeContent.nestedView) {
+                nestedViewElement.innerHTML = routeContent.nestedView(params);
+            } else {
+                nestedViewElement.innerHTML = '';
+            }
+        } else {
+            contentElement.textContent = 'Page not found';
+            nestedViewElement.innerHTML = '';
+        }
+    }
+
+    function navigateTo(route) {
+        window.history.pushState(null, null, route);
+        updateContent();
+    }
+
+    function extractParams(routeTemplate, route) {
+        const paramNames = (routeTemplate.match(/:[a-zA-Z]+/g) || []).map(param => param.slice(1));
+        const paramValues = (route.match(new RegExp(routeTemplate.replace(/:[a-zA-Z]+/g, '([a-zA-Z0-9]+)') + '$')) || []).slice(1);
+        return paramNames.reduce((params, paramName, index) => {
+            params[paramName] = paramValues[index];
+            return params;
+        }, {});
+    }
+
+    function showProductPage(params) {
+        return `Product Page for Product ${params.id}`;
+    }
+
+    // Define a nested view for the product page
+    showProductPage.nestedView = function(params) {
+        return `<p>Product Details for Product ${params.id}</p>`;
+    };
+
+    window.onpopstate = function() {
+        updateContent();
+    };
+
+    updateContent();
+</script>
+
+</body>
+</html>

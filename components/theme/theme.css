@@ -1,0 +1,19 @@
+html[data-prefers-color-scheme='dark'] {
+    --orui-color-primary: #3086ff;
+    --orui-color-success: #34b368;
+    --orui-color-warning: #ffa930;
+    --orui-color-danger: #ff4a58;
+    --orui-color-yellow: #ffa930;
+    --orui-color-orange: #e65a2b;
+    --orui-color-wathet: #0d2543;
+    --orui-color-text: #e6e6e6;
+    --orui-color-text-secondary: #b3b3b3;
+    --orui-color-weak: #808080;
+    --orui-color-light: #4d4d4d;
+    --orui-color-border: #2b2b2b;
+    --orui-color-box: #0a0a0a;
+    --orui-color-background: #1a1a1a;
+    --orui-color-background-body: var(--orui-color-background);
+    --orui-border-color: var(--orui-color-border);
+}
+

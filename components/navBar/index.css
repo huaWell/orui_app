@@ -1,0 +1,61 @@
+:host{
+    --height: 2.8125rem;
+    --border-bottom: none;
+    --left-font-size:var(--orui-font-size-7);
+    background-color: var(--orui-color-background);
+    color: var(--orui-color-text);
+    width: 100%;
+}
+*{
+    box-sizing: border-box;
+}
+
+.orui-nav-bar{
+    display: flex;
+    align-items: center;
+    height: var(--height);
+    border-bottom: var(--border-bottom);
+    padding: 0 0.75rem;
+    white-space: nowrap;
+}
+
+.orui-nav-bar-left{
+    font-size: var(--left-font-size);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    -webkit-tap-highlight-color: transparent;
+    outline:none;
+    background: none;
+    text-decoration: none
+}
+
+.orui-nav-bar-left, .orui-nav-bar-right{
+    flex: 1 1;
+}
+
+.orui-nav-bar-right{
+    text-align: right;
+}
+.orui-nav-bar-back{
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    padding: 0.375rem 0;
+    cursor: pointer;
+}
+
+.orui-nav-bar-title{
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--orui-font-size-10);
+    white-space: nowrap;
+}
+
+.orui-nav-bar-center{
+    flex: auto;
+    text-align: center;
+    padding: 0 0.75rem;
+    overflow: hidden;
+}

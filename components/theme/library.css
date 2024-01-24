@@ -1,0 +1,51 @@
+:root {
+    --orui-radius-s: 4px;
+    --orui-radius-m: 8px;
+    --orui-radius-l: 12px;
+    --orui-gap-min: 4px;
+    --orui-gap-s: 8px;
+    --orui-gap-m: 12px;
+    --orui-gap-l: 16px;
+    --orui-padding-1: 2px;
+    --orui-padding-2: 4px;
+    --orui-padding-3: 8px;
+    --orui-padding-4: 12px;
+    --orui-padding-5: 16px;
+    --orui-padding-6: 20px;
+    --orui-font-size-1: 9px;
+    --orui-font-size-2: 10px;
+    --orui-font-size-3: 11px;
+    --orui-font-size-4: 12px;
+    --orui-font-size-5: 13px;
+    --orui-font-size-6: 14px;
+    --orui-font-size-7: 15px;
+    --orui-font-size-8: 16px;
+    --orui-font-size-9: 17px;
+    --orui-font-size-10: 18px;
+    --orui-color-primary: #1677ff;
+    --orui-color-success: #00b578;
+    --orui-color-warning: #ff8f1f;
+    --orui-color-danger: #ff3141;
+    --orui-color-yellow: #ff9f18;
+    --orui-color-orange: #ff6430;
+    --orui-color-wathet: #e7f1ff;
+    --orui-color-text: #333333;
+    --orui-color-text-secondary: #666666;
+    --orui-color-title: #697b8c;
+    --orui-color-weak: #999999;
+    --orui-color-light: #cccccc;
+    --orui-color-border: #eeeeee;
+    --orui-color-background: #ffffff;
+    --orui-color-highlight: var(--orui-color-danger);
+    --orui-color-white: #ffffff;
+    --orui-color-box: #f5f5f5;
+    --orui-color-disabled: #f5f5f5;
+    --orui-color-text-light-solid: var(--orui-color-white);
+    --orui-color-text-dark-solid: #000000;
+    --orui-color-fill-content: var(--orui-color-box);
+    --orui-font-size-main: var(--orui-font-size-5);
+    --orui-font-family: -apple-system, blinkmacsystemfont, 'Helvetica Neue',
+    helvetica, segoe ui, arial, roboto, 'PingFang SC', 'miui',
+    'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+    --orui-border-color: var(--orui-color-border);
+}

@@ -1,0 +1,40 @@
+:host {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid var(--orui-border-color);
+    padding: var(--orui-padding-4) 0;
+    --gap: var(--orui-gap-min);
+    --font-color: var(--orui-color-text-secondary);
+}
+
+.field {
+    min-width: 6.8rem;
+    display: flex;
+    position: relative;
+}
+
+.nullable {
+    position: absolute;
+    left: -0.6rem;
+    top: 0;
+    font-family: SimSun,sans-serif;
+    color: var(--orui-color-danger);
+    user-select: none;
+}
+
+.label {
+    color: var(--font-color);
+    font-size: var(--orui-font-size-main);
+}
+
+.value {
+    width: 100%;
+    flex: 1;
+}
+
+.message {
+    color: var(--orui-color-danger);
+    margin-top: var(--orui-gap-min);
+    font-size: var(--orui-font-size-main);
+    text-align: left;
+}

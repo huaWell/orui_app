@@ -1,0 +1,152 @@
+:host{
+    display: flex;
+    --disabled-color:var(--orui-color-weak);
+    --placeholder-color: var(--orui-color-light);
+    --padding-normal: 1.5625rem;
+    --padding-large: 2.8125rem;
+}
+
+.orui-input-container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--orui-color-background);
+    font-size: var(--orui-font-size-6);
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    padding: 0.625rem 0.75rem 0.625rem 1.5625rem;
+    box-sizing: border-box;
+    color:var(--orui-color-text);
+    /*border-bottom: 0.0625rem solid var(--orui-color-border);*/
+}
+
+.orui-input-value{
+
+    flex: 1;
+    vertical-align: center;
+}
+
+.orui-input-value-inner{
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.orui-input-box{
+    display: flex;
+    position: relative;
+    flex: 1;
+}
+
+.orui-input{
+    width: 100%;
+    font-size: var(--orui-font-size-6);
+    text-align: center;
+    padding: 0;
+    outline: none;
+    border: 0;
+    flex: 1;
+    background: transparent;
+    text-decoration: none;
+}
+
+.orui-input::placeholder{
+    color: var(--placeholder-color);
+}
+
+.orui-limit-box{
+    padding: 0 0.75rem;
+    font-size: var(--orui-font-size-4);
+    display: flex;
+    align-items: end;
+    position: absolute;
+    right: 0.625rem;
+    bottom: 0;
+}
+
+.orui-input-disabled{
+    color: var(--disabled-color);
+}
+
+.orui-input-disabled::placeholder{
+    color: var(--disabled-color);
+}
+
+.orui-input-disabled input:disabled,.orui-input-disabled .orui-teatarea:disabled{
+    background: none;
+    color: var(--disabled-color);
+    opacity: 1;
+    cursor: not-allowed;
+}
+
+.orui-input-readonly .orui-teatarea:disabled{
+    background: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* 针对Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="password" i]::-ms-reveal{
+    width: 0;
+    height: 0;
+    background-image: none;
+}
+
+.orui-input-icon{
+    display: flex;
+    align-items: end;
+}
+
+.orui-teatarea{
+    resize: none;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    color: var(--orui-color-text);
+    font-size: var(--orui-font-size-9);
+    line-height: 1.5;
+    outline: none;
+    border: 0;
+    appearance: none;
+    min-height: 1.5em;
+    text-align: left;
+    font-family: inherit;
+    padding-right: 0.625rem;
+}
+
+.orui-teatarea::placeholder{
+    color: var(--placeholder-color);
+}
+
+.orui-teatarea::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+.orui-teatarea::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background-color: var(--disabled-color);
+}
+.orui-teatarea::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.orui-icon-container{
+    margin-left: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+}

@@ -1,0 +1,37 @@
+:host{
+    --track-width: 0.5rem;
+    --track-color: var(--orui-color-border);
+    --fill-color: var(--orui-color-primary);
+    width: 100%;
+}
+*{
+    box-sizing: border-box;
+}
+.orui-progress-bar{
+    display: flex;
+    align-items: center;
+}
+
+.orui-progress-bar-trail{
+    flex: auto;
+    background: var(--track-color);
+    overflow: hidden;
+    height: var(--track-width);
+}
+
+.orui-progress-bar-rounded .orui-progress-bar-trail,.orui-progress-bar-rounded .orui-progress-bar-fill{
+    border-radius: var(--track-width);
+}
+
+.orui-progress-bar-fill{
+    transition: width .3s;
+    background: var(--fill-color);
+    height: var(--track-width);
+}
+
+.orui-progress-bar-text{
+    flex: none;
+    width: fit-content;
+    padding-left: 0.5rem;
+    color: var(--orui-color-weak);
+}

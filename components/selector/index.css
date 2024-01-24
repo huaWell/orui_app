@@ -1,0 +1,88 @@
+:host{
+    --color:var(--orui-color-fill-content);
+    --checked-bg-color:var(--orui-color-wathet);
+    --text-color:var(--orui-color-text);
+    --checked-text-color:var(--orui-color-primary);
+    --border-radius: 0.125rem;
+    --padding: 0.5rem 1rem;
+    --border:0.0625rem solid var(--orui-color-border);
+    --gap:var(--orui-gap-m);
+    --active-border-color:var(--orui-color-primary);
+    --columns:1
+}
+.orui-selector-container{
+    width: 100%;
+    overflow: hidden;
+    font-size: var(--orui-font-size-7);
+}
+.orui-selector-options-container{
+    display: inline-flex;
+    gap: var(--gap);
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.orui-grid{
+    display: grid;
+    grid-gap: 0.625rem;
+    grid-column-gap: var(--gap);
+    column-gap: var(--gap);
+    row-gap: var(--gap);
+    grid-template-columns: repeat(var(--columns),minmax(0,1fr));
+    align-items: stretch;
+}
+
+
+
+.orui-selector-option-item{
+    color: var(--text-color);
+    padding: var(--padding);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    background-color: var(--color);
+    text-align: center;
+}
+
+.orui-selector-option-item-disabled{
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.orui-selector-option-item-active{
+    position: relative;
+    color: var(--checked-text-color);
+    background-color: var(--checked-bg-color);
+    border-color: var(--active-border-color);
+}
+
+.orui-check-wrap{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid var(--orui-color-primary);
+    border-left: 10px solid transparent;
+    border-right: 10px solid var(--orui-color-primary);
+}
+
+.orui-check-wrap orui-icon{
+    position: absolute;
+    width: 0.5rem;
+    height: 0.375rem;
+    left: 0;
+    top: 0;
+}
+
+.orui-option-disabled .orui-selector-option-item{
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.orui-selector-item-description{
+    font-size: var(--orui-font-size-main);
+    color: var(--orui-color-weak);
+}

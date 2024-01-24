@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+}
+:host{
+    -webkit-user-select: none;
+    user-select: none;
+    --orui-dropdown-height: 3rem;
+    --orui-dropdown-background: var(--orui-color-white);
+    --orui-dropdown-shadow: 0 0.125rem 0.75rem rgba(100, 101, 102, 0.12);
+    --orui-dropdown-title-font-size: 0.9375rem;
+    --orui-dropdown-title-text-color: var(--orui-color-text);
+    --orui-dropdown-title-active-text-color: var(--orui-color-primary);
+    --orui-dropdown-title-disabled-text-color: var(--orui-color-disabled);
+    --orui-dropdown-title-padding: 0 var(--orui-padding-3);
+    --orui-dropdown-title-line-height: 1.5rem;
+    --active-color: var(--orui-color-primary);
+    --orui-dropdown-content-max-height: 80%;
+    --z-index: 1000;
+    width: 100%;
+    position: relative;
+    display: block;
+}
+
+.orui-dropdown-bar{
+    position: relative;
+    display: flex;
+    height: var(--orui-dropdown-height);
+    background: var(--orui-dropdown-background);
+    box-shadow: var(--orui-dropdown-shadow);
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index: var(--z-index);
+    -ms-overflow-style: none; /* IE 和 Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+
+.orui-dropdown-bar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari 和 Opera */
+}
+
+.orui-dropdown-title{
+    position: relative;
+    box-sizing: border-box;
+    max-width: 100%;
+    padding: var(--orui-dropdown-title-padding);
+    color: var(--orui-dropdown-title-text-color);
+    font-size: var(--orui-dropdown-title-font-size);
+    line-height: var(--orui-dropdown-title-line-height);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.orui-dropdown-bar-title{
+    padding: 0 0.5rem;
+}
+
+.orui-dropdown-bar-content{
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0.25rem;
+    padding-right: 0.75rem;
+}
+
+.orui-dropdown-item-down{
+    display: block;
+    transition-duration: 0.2s;
+    position: absolute;
+    left: -0.3125rem;
+    z-index: 1001;
+    top: var(--orui-dropdown-height);
+}
+
+.orui-dropdown-down{
+    position: fixed;
+    right: 0;
+    left: 50%;
+    height: 100%;
+    margin-top: 0.0625rem;
+    /*width: 100%;*/
+    opacity: 0;
+    /*z-index: calc(var(--z-index) + 10);*/
+    transition: opacity 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+orui-mask{
+    position: absolute;
+    animation-duration: 0.2s;
+    background: rgba(0,0,0,0.7) !important;
+    top: 0;
+    transition: transform 0.3s;
+    transition-duration: 0.2s;
+}
+
+orui-check-list{
+    --border-top: 0;
+    --border-bottom: 0;
+}
+
+.orui-check-list-content{
+    position: fixed;
+    width: 100%;
+    background: var(--orui-dropdown-background);
+}
+
+.orui-dropdown-item-down-active{
+    opacity: 1;
+    display: block;
+}
+
+.orui-dropdown-bar-active{
+    color: var(--active-color);
+}
+
+.orui-dropdown-bar-active .orui-dropdown-arrow{
+    transform: rotate(180deg);
+}
+
+.orui-dropdown-arrow{
+    transform: rotate(0deg);
+    transition: all .3s;
+}

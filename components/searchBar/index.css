@@ -1,0 +1,105 @@
+:host{
+    --height: 2rem;
+    --padding-left: 0.5rem;
+    --background: var(--orui-color-fill-content);
+    --border-radius: 0.375rem;
+    width: 100%;
+    --placeholder-color: var(--orui-color-weak);
+    ---placeholder-color: var(--placeholder-color);
+}
+.orui-search-bar-container{
+    padding: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--height);
+}
+
+.orui-search-bar-input-box{
+    flex: auto;
+    background: var(--background);
+    border-radius: var(--border-radius);
+    border: 0.0625rem solid transparent;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding-left: var(--padding-left);
+}
+
+.orui-seach-bar-icon-container {
+    flex: none;
+    color: var(--orui-color-light);
+    font-size: var(--orui-font-size-8);
+    position: absolute;
+    left: 0.125rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+.orui-search-bar-input {
+    --text-align: left;
+    --background-color: transparent;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    max-height: 100%;
+    min-height: 24px;
+    margin-left: 0.875rem;
+    background-color: var(--background-color);
+    flex: auto;
+    padding: 0.25rem 0.5rem 0.25rem 0.25rem;
+    height: calc(var(--height) - 0.125rem);
+    box-sizing: border-box;
+    --placeholder-color: var(---placeholder-color);
+    --font-size: var(--orui-font-size-7);
+}
+
+.orui-search-bar-input-element{
+    line-height: 1.1875rem;
+    flex: auto;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 0;
+    color: var(--orui-color-text);
+    font-size: var(--font-size);
+    background: 0 0;
+    border: 0;
+    box-sizing: border-box;
+    margin: 0 0.5rem 0 0;
+    outline: none;
+}
+
+.orui-search-bar-focus .orui-search-bar-input-box{
+    border-color: var(--orui-color-primary);
+    background-color: var(--orui-color-background);
+}
+
+.orui-search-bar-focus .orui-search-bar-input{
+    --placeholder-color: var(--orui-color-light);
+}
+
+.orui-search-bar-clear{
+    flex: none;
+    margin-left: 0.5rem;
+    position: absolute;
+    right: 0.5rem;
+    color: var(--orui-color-light);
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    border: 0.0625rem transparent var(--orui-border-color);
+    border-radius: 50%;
+    background-color: var(--background-color);
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+    display: none;
+    /*background-color: red;*/
+}

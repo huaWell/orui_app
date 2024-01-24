@@ -1,0 +1,21 @@
+.orui-icon-image{
+    width: 100%;
+    height: 100%;
+}
+
+:host {
+    --icon-color:var(--orui-color-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--orui-font-size-9);
+}
+svg {
+    fill: var(--icon-color);
+    width: 100%;
+    height: 100%;
+}
+
+svg path{
+    fill: var(--icon-color);
+}
