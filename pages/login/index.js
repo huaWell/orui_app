@@ -5,6 +5,10 @@ export function Login() {
         window.localStorage.setItem('token', '123456');
         navigate_to('/home/todo');
     };
-    return (ORUI.createElement("orui-space", { style: "width: 100%;height: 100%", justify: "center", align: "center" },
-        ORUI.createElement("orui-button", { text: "LOGIN", block: "1", block_width: "60%", type: "fill", color: "primary", size: "large", onClick: click })));
+    const click1 = () => {
+        window.location.href = '/components';
+    };
+    return (ORUI.createElement("orui-space", { style: "width: 100%;height: 100%", justify: "center", align: "center", direction: "vertical" },
+        ORUI.createElement("orui-button", { text: "LOGIN", block: "1", block_width: "60%", type: "fill", color: "primary", size: "large", onClick: click }),
+        ORUI.createElement("orui-button", { text: "COMPONENTS", block: "1", block_width: "60%", type: "fill", color: "primary", size: "large", onClick: click1 })));
 }
