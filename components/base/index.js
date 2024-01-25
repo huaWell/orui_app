@@ -230,7 +230,7 @@ class ORUIElement extends HTMLElement {
     import_css(href) {
         let linkElem = document.createElement("link");
         linkElem.setAttribute("rel", "stylesheet");
-        linkElem.setAttribute("href", href);
+        linkElem.setAttribute("href", href.replace('/components', './'));
         this.shadowRoot.append(linkElem);
     }
 }
