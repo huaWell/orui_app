@@ -1,5 +1,5 @@
-import "/components/svg-inject.min.js";
-import "/components/icon/index.js";
+import "./svg-inject.min.js";
+import "./icon/index.js";
 import "/components/button/index.js";
 import "/components/input/index.js";
 import "/components/tab/index.js";
