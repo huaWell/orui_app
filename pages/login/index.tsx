@@ -9,7 +9,7 @@ export function Login() {
     };
 
     const click1 = () => {
-        window.location.href = '/components'
+        window.location.href = './components'
     };
 
     return (
