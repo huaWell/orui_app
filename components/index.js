@@ -41,31 +41,3 @@ import './router/index.js';
 import './layout/index.js';
 import './page/index.js';
 import './cache/index.js';
-
-const registerServiceWorker = async () => {
-    if ("serviceWorker" in navigator) {
-        alert(1);
-        try {
-            const registration = await navigator.serviceWorker.register("/service_worker.js", {
-                scope: "/",
-            });
-            if (registration.installing) {
-                alert(2);
-                console.log("正在安装 Service worker");
-            } else if (registration.waiting) {
-                alert(3);
-                console.log("已安装 Service worker installed");
-            } else if (registration.active) {
-                alert(4);
-                console.log("激活 Service worker");
-            }
-        } catch (error) {
-            alert(5);
-            console.error(`注册失败：${error}`);
-        }
-    }
-};
-
-// …
-
-registerServiceWorker();
