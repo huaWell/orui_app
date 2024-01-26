@@ -14,6 +14,7 @@ self.addEventListener("install", (event) => {
     console.log("Service worker installed");
     const urlsToCache = [
         "./index.html",
+        "./index.js",
         "./components/index.js",
         " ./components/svg-inject.min.js",
         " ./components/icon/index.js",
