@@ -44,18 +44,23 @@ import './cache/index.js';
 
 const registerServiceWorker = async () => {
     if ("serviceWorker" in navigator) {
+        alter(1);
         try {
             const registration = await navigator.serviceWorker.register("/service_worker.js", {
                 scope: "/",
             });
             if (registration.installing) {
+                alter(2);
                 console.log("正在安装 Service worker");
             } else if (registration.waiting) {
+                alter(3);
                 console.log("已安装 Service worker installed");
             } else if (registration.active) {
+                alter(4);
                 console.log("激活 Service worker");
             }
         } catch (error) {
+            alter(5);
             console.error(`注册失败：${error}`);
         }
     }
