@@ -96,10 +96,9 @@ self.addEventListener("install", (event) => {
         "./components/toast/index.css",
         "./components/utils/index.css"
     ];
-    event.waitUntil((async () => {
-        const cache = await caches.open("pwa-assets");
-        return cache.addAll(urlsToCache);
-    })());
+    event.waitUntil(
+        addResourcesToCache(urlsToCache),
+    );
 });
 
 self.addEventListener("fetch", event => {
