@@ -6,10 +6,10 @@ const addResourcesToCache = async (resources) => {
 self.addEventListener("install", (event) => {
     event.waitUntil(
         addResourcesToCache([
-            "/index.html",
-            "/components/index.css",
-            "/components/index.js",
-            "/components/tab/index.css"
+            "./index.html",
+            "./components/index.css",
+            "./components/index.js",
+            "./components/tab/index.css"
         ]),
     );
 });
