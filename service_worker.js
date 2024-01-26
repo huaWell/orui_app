@@ -1,6 +1,7 @@
 const addResourcesToCache = async (resources) => {
     const cache = await caches.open("v1");
     await cache.addAll(resources);
+
 };
 
 self.addEventListener("install", (event) => {
@@ -12,4 +13,18 @@ self.addEventListener("install", (event) => {
             "./components/tab/index.css"
         ]),
     );
+});
+
+self.addEventListener("fetch", event => {
+    event.respondWith(
+        caches.match(event.request)
+            .then(cachedResponse => {
+                    // It can update the cache to serve updated content on the next request
+                    if(cachedResponse) {
+                        console.log(cachedResponse);
+                    }
+                    return cachedResponse || fetch(event.request);
+                }
+            )
+    )
 });
